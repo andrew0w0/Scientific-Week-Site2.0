@@ -17,7 +17,9 @@ function reveal() {
 window.addEventListener("scroll", reveal);
 
 if(window.screenX < 920) {
-  const div = document.getElementsByClassName('schoolclass');
+  const div = document.getElementById('schoolclass');
+  const a = document.getElementById('schoolclassa')
   
-  document.removeChild(div)
+  div.parentNode.removeChild(div)
+  a.parentNode.removeChild(a)
 }
