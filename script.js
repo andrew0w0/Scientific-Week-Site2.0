@@ -1,3 +1,14 @@
+const div = document.getElementById('schoolclass');
+const a = document.getElementById('schoolclassa');
+
+if(window.innerWidth < 920) {
+  div.style.display = 'none';
+  a.style.display = 'none';
+} else {
+  div.style.display = 'flex';
+  a.style.display = 'flex';
+}
+
 function reveal() {
   var reveals = document.querySelectorAll(".reveal");
 
