@@ -1,0 +1,105 @@
+body {
+  height: 100%;
+  margin: 0;
+}
+
+* {
+  font-family: "Koulen", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+body::after {
+  content: "";
+  background-image: url('../src/images/ticket/background.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  filter: blur(7.8px); /* Applica l'effetto di sfocatura */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.header {
+  color: white;
+  display: flex;
+  height: 114px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px 0px 20px;
+  background-color: rgba(0, 0, 0, 0.500);
+  margin: 30px 30px 30px 30px;
+}
+
+.centertexts {
+  height: 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.centertexts p {
+  color: white;
+  margin-right: 18px;
+  font-size: 40px;
+  text-align: center;
+  transition: text-shadow 0.2s ease-in-out;
+}
+
+.centertexts p:hover {
+  text-shadow: 0px 0px 5px rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.schoolclass {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.schoolclass p {
+  font-size: 40px;
+}
+
+.schoolclass img {
+  width: 80px;
+  height: 80px;
+}
+
+
+.ticket-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ticket-button button {
+  color: white;
+  cursor: pointer;
+  width: 150px;
+  height: 70px;
+  font-size: 28px;
+  background-color: #0075ff;
+  transition: box-shadow 0.2s ease-in-out;
+  border: none;
+}
+
+.ticket-button button:hover {
+  box-shadow: 0px 0px 10px 0px #0250a8;
+}
+
+.ticket-button button:active {
+  background-color: #3b97ff;
+  box-shadow: 0px 0px 10px 0px #2e72c0;
+}

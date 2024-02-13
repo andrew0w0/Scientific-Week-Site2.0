@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <title>FLUXPERIMENT - TICKET</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="./script.js"></script>
+</head>
+<body>
+
+  <div class="header bold">
+    <a href="../" id="schoolclassa">
+      <div class="schoolclass" id="schoolclass"> 
+        <img src="../src/icons/airplane.svg" alt="" >
+        <p>2P</p>
+      </div>
+      </a>
+
+      <div class="centertexts">
+
+        <a href="../">
+        <div class="home">
+          <p>HOME</p>
+        </div>
+        </a>
+        <a onclick="goToPosition()">
+        <div class="position">
+          <p>POSIZIONE</p>
+        </div>
+        </a>
+        <a href="../contact-us">
+        <div class="contact">
+          <p>CONTATTACI</p>
+        </div>
+        </a>
+      </div>
+
+      <div class="ticket-button">
+        <button onclick="window.location.href = './ticket'">BIGLIETTO</button>
+      </div>
+  </div>
+
+  <div class="center">
+
+    <div class="create-ticket ultra-bold highlight-last">
+
+    </div>
+
+    <div class="attention">
+
+    </div>
+
+    <div class="create-ticket-button">
+
+    </div>
+  </div>
+
+  <script>
+    function goToPosition() {
+      window.location.href = '../#position'
+    }
+  </script>
+  
+</body>
+</html>
