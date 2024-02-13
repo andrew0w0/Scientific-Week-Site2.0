@@ -150,13 +150,13 @@ a {
   height: 372px;
 }
 
-.first-title {
+.title {
   display: flex;
   flex-direction: row;
   margin-top: 200px;
 }
 
-.line-first-title {
+.line-title {
   margin-right: 20px;
   margin-top: 30px;
   height: 50px;
@@ -164,26 +164,39 @@ a {
   background-color: #0075ff;
 }
 
-.all-first-title {
+.all-title {
   display: flex;
   flex-direction: row;
   text-align: left;
 }
 
-.all-first-title h1 {
+.second {
+  margin-top: 120px;
+}
+
+.all-title h1 {
   font-family: "Nunito", sans-serif;
   font-size: 30px;
   font-weight: 1000;
   margin-top: 35px;
 }
 
-.first-title p {
+.title p {
   width: 580px;
   font-size: 25px;
   color: #515151;
 }
 
-.container-first-title {
+.title a {
+  color: #515151;
+  text-decoration: underline;
+}
+
+.title a:hover {
+  background-color: #0077ffc7;
+}
+
+.container-title {
   flex-direction: column;
 }
 
@@ -351,13 +364,13 @@ a {
     height: 0%;
   }
 
-  .first-title {
+  .title {
     display: flex;
     flex-direction: row;
     margin-top: 80px;
   }
 
-  .line-first-title {
+  .line {
     margin-right: 20px;
     margin-top: 30px;
     height: 90px;
@@ -365,14 +378,14 @@ a {
     background-color: #0075ff;
   }
 
-  .all-first-title h1 {
+  .all h1 {
     font-family: "Nunito", sans-serif;
     font-size: 30px;
     font-weight: 1000;
     margin-top: 35px;
   }
 
-  .first-title p {
+  .title p {
     width: 300px;
     font-size: 25px;
     color: #515151;
