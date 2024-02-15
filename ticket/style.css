@@ -103,3 +103,36 @@ body::after {
   background-color: #3b97ff;
   box-shadow: 0px 0px 10px 0px #2e72c0;
 }
+
+@media screen and (max-width: 928px) {
+
+  .header {
+    padding: 0px 20px 0px 20px;
+  }
+
+  .schoolclass {
+    display: none;
+  }
+
+  .schoolclassa {
+    display: none;
+  }
+ 
+  .ticket-button button {
+    font-size: 15px;
+    width: 80px;
+    height: 40px;
+  }
+
+  .centertexts p {
+    margin-right: 18px;
+    font-size: 15px;
+    text-align: center;
+    transition: text-shadow 0.2s ease-in-out;
+  }
+
+  .centertexts p:hover {
+    text-shadow: 0px 0px 5px rgb(255, 255, 255);
+  }
+  
+}
