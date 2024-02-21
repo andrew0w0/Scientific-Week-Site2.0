@@ -31,10 +31,12 @@ body::after {
 .inputs-ticket {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .inputs-ticket input {
-  background-color: #163b64;
+  background-color: rgba(217, 217, 217, 0.85);
   border: none;
   color: white;
   padding: 10px 20px;
@@ -43,9 +45,24 @@ body::after {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
+  margin: 6px 2px;
   border-radius: 5px;
+  width: 70%;
+  transition-property: all;
+  transition: 0.5s ease-in-out;
+}
+
+.inputs-ticket input::placeholder {
+  color: white;
+}
+
+.inputs-ticket input:focus {
+  transform: scale(1.13);
+  outline: none;
+}
+
+.inputs-ticket input:focus::placeholder {
+  color: none;
 }
 
 .create-ticket-button #confirm-button {
@@ -157,6 +174,8 @@ body::after {
 }
 
 .create-ticket-button {
+  justify-content: center;
+  align-items: center;
   margin-top: 20px;
   margin-left: -65px;
 }

@@ -73,10 +73,69 @@ createButton.addEventListener('click', (Event) => {
 
   componentsDiv.removeChild(createButton);
 
+  confirmButton.addEventListener('click', (Event) => {
+    const name = document.getElementById('input-name').value;
+    const location = document.getElementById('input-location').value;
+
+    alert("Nome: " + name + "\nLuogo: " + location);
+
+    componentsDiv.removeChild(inputDiv);
+    componentsDiv.removeChild(confirmButton)
+
+    const ticketDiv = document.createElement("div");
+    ticketDiv.className = "ticket"
+
+    const canvas = document.createElement('canvas');
+
+    canvas.id = "canvas-ticket"
+    canvas.width = 900
+    canvas.height = 347
+
+    const context = canvas.getContext("2d");
+
+    const image = new Image()
+
+    image.src = "../src/images/ticket/ticket.png"
+
+    image.onload = function() {
+      context.drawImage(image, 0, 0, canvas.width, canvas.height)
+
+      var font = new FontFaceObserver("League Spartan")
+
+      font.load().then(() => {
+        context.font = 'bold 38px "League Spartan"'
+        context.fillStyle = 'white'
+        context.textAlign = "left"
+
+        context.fillText(location.toUpperCase(), 50, 180, 150)
+
+        context.font = 'bold 34px "League Spartan"';
+
+        context.fillText(name.toUpperCase(), 0, 0)
+      }).catch((error) => {
+        console.log('Font not avaible', error)
+      })
+
+      var fontSanchez = new FontFaceObserver("Sanchez");
+
+      fontSanchez.load().then(() => {
+        context.font = 'bold 34px "Sanchez"'
+        context.fillStyle = 'white'
+        context.textAlign = "left"
+
+        
+      })
+    }
+
+    ticketDiv.appendChild(canvas);
+
+    componentsDiv.appendChild(ticketDiv)
+
+  })
+
   inputDiv.appendChild(input1);
   inputDiv.appendChild(input2)
   componentsDiv.appendChild(inputDiv);
   componentsDiv.appendChild(confirmButton)
 })
-
-
+/*https://www.canva.com/design/DAF7uB6tJpQ/szcxdi41JRQcDC8Nt6lyPg/edit?utm_content=DAF7uB6tJpQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton*/
