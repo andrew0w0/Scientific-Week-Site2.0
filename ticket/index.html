@@ -1,45 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="../src/logo/logo.png" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css2?family=Koulen&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Koulen&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
   <title>FLUXPERIMENT - TICKET</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
   <div class="header bold">
     <a href="../" id="schoolclassa">
-      <div class="schoolclass" id="schoolclass"> 
-        <img src="../src/icons/airplane.svg" alt="" >
+      <div class="schoolclass" id="schoolclass">
+        <img src="../src/icons/airplane.svg" alt="">
         <p>2P</p>
       </div>
-      </a>
+    </a>
 
-      <div class="centertexts">
+    <div class="centertexts">
 
-        <a href="../">
+      <a href="../">
         <div class="home">
           <p>HOME</p>
         </div>
-        </a>
-        <a onclick="goToPosition()">
+      </a>
+      <a onclick="goToPosition()">
         <div class="position">
           <p>POSIZIONE</p>
         </div>
-        </a>
-        <a href="../contact-us">
+      </a>
+      <a href="../contact-us">
         <div class="contact">
           <p>CONTATTACI</p>
         </div>
-        </a>
-      </div>
+      </a>
+    </div>
 
-      <div class="ticket-button">
-        <button onclick="window.location.href = './ticket'">BIGLIETTO</button>
-      </div>
+    <div class="ticket-button">
+      <button onclick="window.location.href = './'">BIGLIETTO</button>
+    </div>
   </div>
 
   <div class="center">
@@ -49,11 +53,13 @@
     </div>
 
     <div class="attention">
-      <p id="attention">Attenzione! Il laboratorio e’ accessibile completamente gratis anche senza il biglietto! Questa e’ una speciale iniziativa che il 2^P ha voluto realizzare, per assicurarsi che i partecipanti non dimentichino mai questa straordinaria esperienza. Non perdete questa opportunita’ unica!</p>
+      <p id="attention">Attenzione! Il laboratorio e’ accessibile completamente gratis anche senza il biglietto! Questa
+        e’ una speciale iniziativa che il 2^P ha voluto realizzare, per assicurarsi che i partecipanti non dimentichino
+        mai questa straordinaria esperienza. Non perdete questa opportunita’ unica!</p>
     </div>
 
-    <div class="create-ticket-button">
-      <button>PERSONALIZZA</button>
+    <div class="create-ticket-button" , id="components">
+      <button id="ticket-button">PERSONALIZZA</button>
     </div>
   </div>
 
@@ -64,6 +70,7 @@
   </script>
 
   <script src="./script.js"></script>
-  
+
 </body>
+
 </html>

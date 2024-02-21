@@ -18,13 +18,40 @@ body::after {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  filter: blur(6px); /* Applica l'effetto di sfocatura */
+  filter: blur(6px);
+  /* Applica l'effetto di sfocatura */
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: -1;
+}
+
+.inputs-ticket {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputs-ticket input {
+  background-color: #163b64;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.create-ticket-button #confirm-button {
+  margin-top: 20px;
+  font-size: 30px;
+  width: 280px;
 }
 
 .header {
@@ -114,6 +141,7 @@ body::after {
   background-color: #0075ff;
   border: none;
   color: white;
+  cursor: pointer;
   height: 90px;
   width: 260px;
   font-size: 35px;
