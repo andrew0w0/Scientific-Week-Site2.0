@@ -13,7 +13,7 @@ a {
 
 body::after {
   content: "";
-  background-image: url('../src/images/ticket/background.jpeg');
+  background-image: url('../src/images/ticket/background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;

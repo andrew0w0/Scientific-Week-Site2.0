@@ -63,9 +63,11 @@ createButton.addEventListener('click', (Event) => {
   const input1 = document.createElement("input");
   input1.id = 'input-name'
   input1.placeholder = 'Come ti chiami?'
+  input1.autocomplete = "off";
   const input2 = document.createElement("input");
   input2.id = 'input-location'
   input2.placeholder = "Di dove sei?"
+  input2.autocomplete = "off";
 
   const confirmButton = document.createElement("button");
   confirmButton.id = "confirm-button"
@@ -74,10 +76,8 @@ createButton.addEventListener('click', (Event) => {
   componentsDiv.removeChild(createButton);
 
   confirmButton.addEventListener('click', (Event) => {
-    const name = document.getElementById('input-name').value;
-    const location = document.getElementById('input-location').value;
-
-    alert("Nome: " + name + "\nLuogo: " + location);
+    const name = document.getElementById('input-name').value.toUpperCase();
+    const location = document.getElementById('input-location').value.toUpperCase();
 
     componentsDiv.removeChild(inputDiv);
     componentsDiv.removeChild(confirmButton)
@@ -88,8 +88,8 @@ createButton.addEventListener('click', (Event) => {
     const canvas = document.createElement('canvas');
 
     canvas.id = "canvas-ticket"
-    canvas.width = 900
-    canvas.height = 347
+    canvas.width = 1000
+    canvas.height = 324
 
     const context = canvas.getContext("2d");
 
@@ -107,11 +107,15 @@ createButton.addEventListener('click', (Event) => {
         context.fillStyle = 'white'
         context.textAlign = "left"
 
-        context.fillText(location.toUpperCase(), 50, 180, 150)
+        context.fillText(location, 50, 170, 150)
 
-        context.font = 'bold 34px "League Spartan"';
+        context.fillStyle = 'black'
+        context.textAlign = "right"
 
-        context.fillText(name.toUpperCase(), 0, 0)
+        context.font = 'bold 12pt "League Spartan"'
+
+        context.fillText(location, 970, 70, 150)
+
       }).catch((error) => {
         console.log('Font not avaible', error)
       })
@@ -119,11 +123,20 @@ createButton.addEventListener('click', (Event) => {
       var fontSanchez = new FontFaceObserver("Sanchez");
 
       fontSanchez.load().then(() => {
-        context.font = 'bold 34px "Sanchez"'
-        context.fillStyle = 'white'
+        context.font = '10.5pt "Sanchez"'
+
+        context.fillStyle = 'black'
+
         context.textAlign = "left"
 
-        
+        context.fillText(name, 690, 80)
+
+        context.font = '8.5pt "Sanchez"'
+
+        context.fillStyle = '#F4F6FC'
+
+        context.fillText(name, 418, 67)
+
       })
     }
 
