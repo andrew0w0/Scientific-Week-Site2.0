@@ -19,7 +19,7 @@ body::after {
   background-attachment: fixed;
   background-position: center;
   filter: blur(6px);
-  /* Applica l'effetto di sfocatura */
+  min-height: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -200,7 +200,13 @@ body::after {
   box-shadow: 0px 0px 10px 0px #2e72c0;
 }
 
-/*@media screen and (max-width: 928px) {
+@media screen and (max-width: 928px) {
+
+  body::after {
+    background-attachment: scroll;
+    height: 100%;
+  }
+
 
   .header {
     padding: 0px 20px 0px 20px;
@@ -213,7 +219,49 @@ body::after {
   .schoolclassa {
     display: none;
   }
- 
+
+  .center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .center h1 {
+    color: white;
+    text-align: center;
+    font-weight: normal;
+    width: 360px;
+    margin-left: -10px;
+    margin-top: -22px;
+    font-size: 50px;
+    text-shadow: 0px 0px 15px black;
+  }
+
+  .create-ticket-button button {
+    background-color: #0075ff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-left: 55px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    font-size: 20px;
+    transition: box-shadow 0.15s ease-in-out;
+  }
+
+  .center p {
+    text-shadow: 0px 0px 5px black;
+    color: white;
+    margin-top: -20px;
+    text-align: center;
+    margin-left: 0px;
+    width: 20em;
+  }
+
+
   .ticket-button button {
     font-size: 15px;
     width: 80px;
@@ -230,5 +278,5 @@ body::after {
   .centertexts p:hover {
     text-shadow: 0px 0px 5px rgb(255, 255, 255);
   }
-  
+
 }

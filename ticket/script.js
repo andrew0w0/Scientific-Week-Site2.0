@@ -1,6 +1,16 @@
 const div = document.getElementById('schoolclass');
 const a = document.getElementById('schoolclassa');
 
+var observer = new MutationObserver(function(mutations) {
+  document.body.style.height = `${document.body.scrollHeight}px`;
+});
+
+// Configura l'observer
+var config = { attributes: true, childList: true, characterData: true, subtree: true };
+
+// Passa l'elemento target all'observer
+observer.observe(document.body, config);
+
 if (window.innerWidth < 920) {
   div.style.display = 'none';
   a.style.display = 'none';
