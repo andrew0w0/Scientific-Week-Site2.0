@@ -19,7 +19,7 @@ body::after {
   background-attachment: fixed;
   background-position: center;
   filter: blur(6px);
-  min-height: 100%;
+  min-height: var(--altezza-body);
   position: absolute;
   top: 0;
   left: 0;
@@ -33,6 +33,10 @@ body::after {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.ticket {
+  margin-left: 100px;
 }
 
 .inputs-ticket input {
@@ -89,6 +93,27 @@ body::after {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+
+.download {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.download button {
+  background-color: rgba(39, 39, 39, 0.507) !important;
+  border-width: 6px !important;
+  border-style: solid !important;
+  border-image: linear-gradient(to right bottom, rgb(0, 140, 255), rgb(0, 0, 187)) 1 !important;
+  box-shadow: 0 0 15px blue;
+  text-shadow: 0 0 0px transparent;
+}
+
+.download button:hover {
+  text-shadow: 0 0 15px white;
+  box-shadow: 0 0 15px blue;
 }
 
 .centertexts p {
@@ -162,7 +187,7 @@ body::after {
   height: 90px;
   width: 260px;
   font-size: 35px;
-  transition: box-shadow 0.15s ease-in-out;
+  transition: box-shadow 0.15s ease-in-out, text-shadow 0.5s ease-in-out;;
 }
 
 .create-ticket-button button:hover {
@@ -207,6 +232,15 @@ body::after {
     height: 100%;
   }
 
+  .ticket {
+    margin-left: 70px;
+  }
+
+  .ticket canvas {
+    width: 98%;
+    height: auto;
+  }
+
 
   .header {
     padding: 0px 20px 0px 20px;
@@ -219,6 +253,32 @@ body::after {
   .schoolclassa {
     display: none;
   }
+
+  .inputs-ticket {
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  
+.inputs-ticket input {
+  background-color: rgba(217, 217, 217, 0.85);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 6px 2px;
+  border-radius: 5px;
+  width: 45%;
+  transition-property: all;
+  transition: 0.5s ease-in-out;
+}
 
   .center {
     display: flex;
@@ -236,6 +296,10 @@ body::after {
     margin-top: -22px;
     font-size: 50px;
     text-shadow: 0px 0px 15px black;
+  }
+
+  .create-ticket-button {
+    padding-bottom: 50px;
   }
 
   .create-ticket-button button {
@@ -277,6 +341,12 @@ body::after {
 
   .centertexts p:hover {
     text-shadow: 0px 0px 5px rgb(255, 255, 255);
+  }
+
+  .create-ticket-button #confirm-button {
+    margin-top: 20px;
+    font-size: 20px;
+    width: 200px;
   }
 
 }
