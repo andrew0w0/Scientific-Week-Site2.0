@@ -20,7 +20,6 @@ a {
   background-position: center;
   filter: blur(6px);
   height: 100%;
-  min-height: var(--altezza-body) + 100px;
   position: absolute;
   top: 0;
   left: 0;
@@ -230,11 +229,12 @@ a {
 
   .background {
     background-attachment: scroll;
-    height: 100%;
+    height: 115%;
   }
 
   .ticket {
     margin-left: 70px;
+    margin-top: -30px;
   }
 
   .ticket canvas {

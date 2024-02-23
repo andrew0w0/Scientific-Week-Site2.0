@@ -170,7 +170,7 @@ createButton.addEventListener('click', (Event) => {
 
     componentsDiv.appendChild(downloadDiv)
     componentsDiv.appendChild(ticketDiv)
-    
+
 
     modificaAltezzaBody();
 
@@ -193,7 +193,5 @@ function modificaAltezzaBody() {
   var altezzaBody = document.body.scrollHeight;  // Ottieni l'altezza del body
 
   // Imposta la variabile CSS --altezza-body
-  document.body.style.setProperty('--altezza-body', altezzaBody + 100 + 'px');
-
-  alert('Altezza modificata. ' + altezzaBody)
+  document.getElementById("background").style.height = '105%'
 }
