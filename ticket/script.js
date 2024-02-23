@@ -94,6 +94,14 @@ createButton.addEventListener('click', (Event) => {
 
     const ticketDiv = document.createElement("div");
     ticketDiv.className = "ticket"
+    const downloadDiv = document.createElement("div");
+    downloadDiv.className = "download"
+
+    const downloadButton = document.createElement('button');
+
+    downloadButton.textContent = "Scarica"
+
+    downloadDiv.appendChild(downloadButton);
 
     const canvas = document.createElement('canvas');
 
@@ -150,15 +158,40 @@ createButton.addEventListener('click', (Event) => {
       })
     }
 
+    downloadButton.addEventListener('click', (Event) => {
+      var link = document.createElement('a');
+
+      link.download = `fluxperiment-${name.toLowerCase()}.png`
+      link.href = canvas.toDataURL();
+      link.click();
+    })
+
     ticketDiv.appendChild(canvas);
 
+    componentsDiv.appendChild(downloadDiv)
     componentsDiv.appendChild(ticketDiv)
+
+
+    modificaAltezzaBody();
 
   })
 
   inputDiv.appendChild(input1);
-  inputDiv.appendChild(input2)
+  inputDiv.appendChild(input2);
   componentsDiv.appendChild(inputDiv);
-  componentsDiv.appendChild(confirmButton)
+  componentsDiv.appendChild(confirmButton);
+
+  modificaAltezzaBody();
 })
 /*https://www.canva.com/design/DAF7uB6tJpQ/szcxdi41JRQcDC8Nt6lyPg/edit?utm_content=DAF7uB6tJpQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton*/
+
+function modificaAltezzaBody() {
+
+
+  var altezzaBody = document.body.scrollHeight;  // Ottieni l'altezza del body
+
+  // Imposta la variabile CSS --altezza-body
+  document.body.style.setProperty('--altezza-body', altezzaBody + 100 + 'px');
+
+  alert('Altezza modificata. ' + altezzaBody)
+}
