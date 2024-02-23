@@ -13,7 +13,7 @@ a {
 
 .background {
   content: "";
-  background-image: url('../src/images/ticket/background.jpg');
+  background: url('../src/images/ticket/background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
