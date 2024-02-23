@@ -170,6 +170,9 @@ createButton.addEventListener('click', (Event) => {
 
     componentsDiv.appendChild(downloadDiv)
     componentsDiv.appendChild(ticketDiv)
+    
+
+    modificaAltezzaBody();
 
 
     modificaAltezzaBody();
@@ -186,7 +189,6 @@ createButton.addEventListener('click', (Event) => {
 /*https://www.canva.com/design/DAF7uB6tJpQ/szcxdi41JRQcDC8Nt6lyPg/edit?utm_content=DAF7uB6tJpQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton*/
 
 function modificaAltezzaBody() {
-
 
   var altezzaBody = document.body.scrollHeight;  // Ottieni l'altezza del body
 

@@ -188,7 +188,6 @@ body::after {
   width: 260px;
   font-size: 35px;
   transition: box-shadow 0.15s ease-in-out, text-shadow 0.5s ease-in-out;
-  ;
 }
 
 .create-ticket-button button:hover {
@@ -262,7 +261,6 @@ body::after {
     justify-content: center;
     align-items: center;
   }
-
 
   .inputs-ticket input {
     background-color: rgba(217, 217, 217, 0.85);

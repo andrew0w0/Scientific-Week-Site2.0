@@ -1,7 +1,7 @@
 const div = document.getElementById('schoolclass');
 const a = document.getElementById('schoolclassa');
 
-if(window.innerWidth < 920) {
+if (window.innerWidth < 920) {
   div.style.display = 'none';
   a.style.display = 'none';
 } else {
@@ -27,11 +27,11 @@ function reveal() {
 
 window.addEventListener("scroll", reveal);
 
-window.addEventListener("resize", function () {
+window.addEventListener("resize", function() {
   const div = document.getElementById('schoolclass');
   const a = document.getElementById('schoolclassa');
 
-  if(window.innerWidth < 920) {
+  if (window.innerWidth < 920) {
     div.style.display = 'none';
     a.style.display = 'none';
   } else {
