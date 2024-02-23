@@ -11,7 +11,7 @@ a {
   text-decoration: none;
 }
 
-body::after {
+.background {
   content: "";
   background-image: url('../src/images/ticket/background.jpg');
   background-repeat: no-repeat;
@@ -19,6 +19,7 @@ body::after {
   background-attachment: fixed;
   background-position: center;
   filter: blur(6px);
+  height: 100%;
   min-height: var(--altezza-body) + 100px;
   position: absolute;
   top: 0;
@@ -227,7 +228,7 @@ body::after {
 
 @media screen and (max-width: 928px) {
 
-  body::after {
+  .background {
     background-attachment: scroll;
     height: 100%;
   }
